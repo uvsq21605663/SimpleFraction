@@ -20,17 +20,18 @@ En terme de *commits*, quelle différence constatez-vous entre cocher une (ou pl
     *Pour la suite, ne cochez aucune de ces cases*.
 1. Localement, configurez `git` avec votre nom (`user.name`) et votre email (`user.email`);
     ```bash
-    # Répondre ici
+    $ git config --global user.name "Romain GICQUIAUD--ROUSSET"
+    $ git config --global user.email romaingicquiaud@yahoo.fr
     ```
 1. Initialisez le dépôt `git` local pour le projet;
     ```bash
-    # Répondre ici
+    $ git init
     ```
 1. Créez la classe `Fraction` (vide pour le moment) et la classe `Main` (avec un simple affichage) dans le projet;
 Vérifiez que le projet compile et s'exécute dans l'IDE;
 Validez les changements;
     ```bash
-    # Commandes pour valider les changements
+    $ git add Fraction
     ```
 1. Ajoutez un constructeur et la méthode `toString` à la classe `Fraction` et modifiez la classe `Main` en conséquence;
 Validez les changements;
