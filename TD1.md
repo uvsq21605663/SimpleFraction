@@ -31,37 +31,46 @@ En terme de *commits*, quelle différence constatez-vous entre cocher une (ou pl
 Vérifiez que le projet compile et s'exécute dans l'IDE;
 Validez les changements;
     ```bash
-    $ git add Fraction
+    $ git commit -m "Ajout des classes Main et Fraction"
     ```
 1. Ajoutez un constructeur et la méthode `toString` à la classe `Fraction` et modifiez la classe `Main` en conséquence;
 Validez les changements;
     ```Java
-    // Code pour tester toString
+    public class Main
+	{
+		public static void main(String[] args){
+
+			Fraction stringTest = new Fraction(10,5);
+			System.out.println(stringTest.toString());
+		}
+	}
     ```
 1. Publiez vos modifications sur le dépôt distant;
 Vous utiliserez le protocole `https` pour cela;
 Vérifiez avec le navigateur;
     ```bash
-    # Commandes pour publier les modifications
+    $ git add *.java
+	$ git commit -m "Adding constructor + test in main"
+	$ git push
     ```
 1. Sur la forge, ajoutez un fichier de documentation `README.md`.
 Quelle syntaxe est utilisée pour ce fichier ?
-    > Répondre ici
+    > Markdown
 1. Récupérez localement les modifications effectuées sur la forge.
     ```bash
-    # Répondre ici
+    $ git pull
     ```
 1. Ajoutez les répertoires et fichiers issus de la compilation aux fichiers ignorés par `git` (fichier `.gitignore`);
     ```bash
-    # Copier ici le contenu de `.gitignore`
+    *.class
     ```
 1. Retirez les fichiers de configuration de l'IDE du projet;
     ```bash
-    # Répondre ici
+    git rm *.config
     ```
     Ajoutez-les aux fichiers ignorés par `git`.
     ```bash
-    # Copier ici les modifications de `.gitignore`
+    *.config
     ```
 1. Configurez l'accès par clé publique/clé privée à la forge (cf. [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)).
     > Expliquez la procédure de façon synthétique
@@ -77,12 +86,12 @@ Pour répondre à ces questions, vous devez effectuer les recherches documentair
 1. Quelle commande permet d'obtenir de l'aide ?
 Donnez un exemple.
     ```bash
-    # $ man
+    $ man
     ```
 1. Donnez la ou les commandes shell permettant de
     1. afficher les fichiers d'un répertoire triés par taille (taille affichée lisiblement)
         ```bash
-        #$ ls -lS    -> -l donne la liste (et la taille) et -S trie les fichiers par taille (+ gros en haut)
+        $ ls -lS    -> -l donne la liste (et la taille) et -S trie les fichiers par taille (+ gros en haut)
         ```
     1. compter le nombre de ligne d'un fichier
         ```bash
