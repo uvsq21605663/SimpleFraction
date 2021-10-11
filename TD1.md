@@ -95,27 +95,28 @@ Donnez un exemple.
         ```
     1. compter le nombre de ligne d'un fichier
         ```bash
-        # Répondre ici
+        $ wc -l Main.java
         ```
     1. afficher les lignes du fichier `Main.java` contenant la chaîne `uneVariable`
         ```bash
-        # Répondre ici
+        $ grep -F uneVariable Main.java
         ```
     1. afficher récursivement les fichiers `.java` contenant la chaîne `uneVariable`
         ```bash
-        # Répondre ici
+        $ grep -F uneVariable *.java
         ```
     1. trouver les fichiers (pas les répertoires) nommés `README.md` dans une arborescence de répertoires
         ```bash
-        # Répondre ici
+		$ find -name README.md
         ```
     1. afficher les différences entre deux fichiers textes
         ```bash
-        # Répondre ici
+        $ diff file1.txt file2.txt
         ```
 1. Expliquez en une ou deux phrases le rôle de ces commandes et dans quel contexte elles peuvent être utiles pour un développeur.
     * `ssh`
-        > Répondre ici
+        Ssh (client) est un programme qui permet de se connecter à des machines distantes pour y exectuer des commandes.
+        Ssh permet aussi d'avoir une communication chiffrée entres les machines. 
     * `screen`/`tmux`
         > Répondre ici
     * `curl`/[HTTPie](https://httpie.org/)
@@ -129,29 +130,27 @@ Vous pouvez choisir l'IDE/éditeur de texte de votre choix.
 Pour réaliser cette exercice, vous devez bien évidemment vous reporter à la documentations de l'IDE ([IntelliJ IDEA](https://www.jetbrains.com/help/idea/discover-intellij-idea.html#developer-tools), [Visual Studio Code](https://code.visualstudio.com/docs), [Eclipse](https://help.eclipse.org/2020-09/index.jsp), …).
 
 1. Quels IDE ou éditeurs de texte utilisez-vous pour le développement Java ?
-    > Répondre ici
-
+    > IntelliJ
     Pour la suite, ne considérez que l'un de vos choix.
 1. Comment vérifier/définir que l'encodage utilisé est *UTF-8* ?
-    > Répondre ici
+    > En bas a gauche de l'IDE.
 1. Comment choisir le JDK à utiliser dans un projet ?
-    > Répondre ici
+    > Pour choisir un JDK on regarde d'abord la compatibilité avec les librairies que l'on va utiliser, et ensuite on choisit la version la plus stable dans les versions les plus récentes.
 1. Comment préciser la version Java des sources dans un projet ?
-    > Répondre ici
+    > On met une entête @version xxx.xxx.xxx
 1. Comment ajouter une bibliothèque externe dans un projet ?
-    > Répondre ici
+    > File -> Project structure -> Modules -> Dependencies -< (+) -> Library -> inclure la librairie
 1. Comment reformater un fichier source Java ?
-    > Répondre ici
+    > Ctrl + Alt + Shift + L
 1. Comment trouver la déclaration d'une variable ou méthode ?
-    > Répondre ici
+    > Ctrl + B
 1. Comment insérer un bloc de code prédéfini (*snippet*) ?
-    > Répondre ici
+    > Ctrl + Alt + S
 1. Comment renommer une classe dans l'ensemble du projet ?
-    > Répondre ici
+    > Shift + F6
 1. Comment exécuter le programme en lui passant un paramètre en ligne de commande ?
-    > Répondre ici
+    > En haut a droite "nom_du_fichier" -> edit configuration -> environment variables
 1. Comment déboguer le programme en visualisant le contenu d'une ou plusieurs variables ?
-    > Répondre ici
+    > Utilisation du debogeur (petit icone insecte)
 1. Quels paramètres ou fonctionnalités vous semblent particulièrement importants/utiles pour le développement Java ?
-    > Répondre ici
-#SimpleFraction
+    > Les tests unitaires son assez important en java et permettent de bien tester et d'implementer ces tests.
