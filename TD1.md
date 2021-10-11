@@ -73,7 +73,11 @@ Quelle syntaxe est utilisée pour ce fichier ?
     *.config
     ```
 1. Configurez l'accès par clé publique/clé privée à la forge (cf. [Connecting to GitHub with SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)).
-    > Expliquez la procédure de façon synthétique
+    > Pour configurer l'accès pas clés SSH, il faut commencer par créer une clé via :
+    ```bash
+    $ ssh-keygen -t ed25519 -C "adresse_mail@github.com"
+    ```
+    une fois la clé crée, on la récupère et on peut l'envoyer sur git pour la valider dans "Settings" puis "SSH and GPG keys"
 
 ## Partie II (à faire à la maison) : révisions et perfectionnement *shell* et *IDE*
 ### Maîtriser le *shell* de commandes
@@ -118,11 +122,11 @@ Donnez un exemple.
         Ssh (client) est un programme qui permet de se connecter à des machines distantes pour y exectuer des commandes.
         Ssh permet aussi d'avoir une communication chiffrée entres les machines. 
     * `screen`/`tmux`
-        > Répondre ici
+        > screen et tmux sont des multiplexeurs, c'est à dire qu'ils permettent de séparer une fenêtre shell en plusieurs.
     * `curl`/[HTTPie](https://httpie.org/)
-        > Répondre ici
+        > Curl et HTTPie permettent de transfèrer des données vers des serveurs ou bien de télécharger des données depuis des serveurs.
     * [jq](https://stedolan.github.io/jq/)
-        > Répondre ici
+        > jq permet de manipuler les JSON via différents filtres.
 
 ### Découverte de votre *IDE*
 Dans cet exercice, vous expliquerez en quelques phrases comment vous réalisez les actions ci-dessous dans votre IDE.
